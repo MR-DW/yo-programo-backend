@@ -8,15 +8,15 @@ public class dtoExperiencia {
     @NotBlank
     private String nombreExp;
     @NotBlank
-    private String descripExp;
+    private String descripcionExp;
     
     //Constructor 
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreExp, String descripExp) {
+    public dtoExperiencia(String nombreExp, String descripcionExp) {
         this.nombreExp = nombreExp;
-        this.descripExp = descripExp;
+        this.descripcionExp = descripcionExp;
     }
     
     //GyS
@@ -29,12 +29,12 @@ public class dtoExperiencia {
         this.nombreExp = nombreExp;
     }
 
-    public String getDescripExp() {
-        return descripExp;
+    public String getDescripcionExp() {
+        return descripcionExp;
     }
 
-    public void setDescripExp(String descripExp) {
-        this.descripExp = descripExp;
+    public void setDescripcionExp(String descripExp) {
+        this.descripcionExp = descripcionExp;
     }
     
 }

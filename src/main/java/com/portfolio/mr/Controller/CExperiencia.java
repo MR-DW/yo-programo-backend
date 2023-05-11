@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-//@RequestMapping("experiencia")
+@RequestMapping("experiencia")
 @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 public class CExperiencia {
 
@@ -41,7 +41,7 @@ public class CExperiencia {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         if(sExperiencia.existsByNombreExp(dtoexp.getNombreExp()))
             return new ResponseEntity (new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
-        Experiencia experiencia = new Experiencia(dtoexp.getNombreExp(), dtoexp.getDescripExp());
+        Experiencia experiencia = new Experiencia(dtoexp.getNombreExp(), dtoexp.getDescripcionExp());
         sExperiencia.save(experiencia);
         
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
@@ -74,7 +74,7 @@ public class CExperiencia {
         //setea nombre y descripcion
         Experiencia experiencia = sExperiencia.getOne(id).get();
         experiencia.setNombreExp(dtoexp.getNombreExp());
-        experiencia.setDescripExp(dtoexp.getDescripExp());
+        experiencia.setDescripExp(dtoexp.getDescripcionExp());
         
         sExperiencia.save(experiencia);
         
