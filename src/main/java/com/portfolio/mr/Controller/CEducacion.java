@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/educacion")
+//@RequestMapping("/educacion")
 @CrossOrigin(origins = "http://localhost:4200")
 public class CEducacion {
     
@@ -64,7 +64,7 @@ public class CEducacion {
     }
     
     @PreAuthorize("hasRole ('ADMIN')")
-    @GetMapping("experiencia/detail/{id}")
+    @GetMapping("/detail/{id}")
     public ResponseEntity<Educacion> getById(@PathVariable("id") int id){
         if(!sEducacion.existsById(id)){
             return new ResponseEntity(new Mensaje("no existe el id"), HttpStatus.NOT_FOUND);

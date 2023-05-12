@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("experiencia")
+//@RequestMapping("/experiencia")
 @CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 public class CExperiencia {
 
