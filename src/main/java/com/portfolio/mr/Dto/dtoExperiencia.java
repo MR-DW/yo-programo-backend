@@ -33,7 +33,7 @@ public class dtoExperiencia {
         return descripcionExp;
     }
 
-    public void setDescripcionExp(String descripExp) {
+    public void setDescripcionExp(String descripcionExp) {
         this.descripcionExp = descripcionExp;
     }
     

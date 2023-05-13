@@ -8,16 +8,16 @@ public class dtoEducacion {
     @NotBlank
     private String nombreEdu;
     @NotBlank
-    private String descripcionEdu;
+    private String descripcionEd;
     
     //Constructor
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreEdu, String descripcionEdu) {
+    public dtoEducacion(String nombreEdu, String descripcionEd) {
         this.nombreEdu = nombreEdu;
-        this.descripcionEdu = descripcionEdu;
+        this.descripcionEd = descripcionEd;
     }
     
     //GyS
@@ -30,12 +30,12 @@ public class dtoEducacion {
         this.nombreEdu = nombreEdu;
     }
 
-    public String getDescripcionEdu() {
-        return descripcionEdu;
+    public String getDescripcionEd() {
+        return descripcionEd;
     }
 
-    public void setDescripcionEdu(String descripcionEdu) {
-        this.descripcionEdu = descripcionEdu;
+    public void setDescripcionEd(String descripcionEd) {
+        this.descripcionEd = descripcionEd;
     }
     
     

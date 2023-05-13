@@ -20,9 +20,9 @@ public class Experiencia {
     public Experiencia() {
     }
 
-    public Experiencia(String nombreExp, String descripExp) {
+    public Experiencia(String nombreExp, String descripcionExp) {
         this.nombreExp = nombreExp;
-        this.descripcionExp = descripExp;
+        this.descripcionExp = descripcionExp;
     }
     
     //GyS
@@ -43,11 +43,11 @@ public class Experiencia {
         this.nombreExp = nombreExp;
     }
 
-    public String getDescripExp() {
+    public String getDescripcionExp() {
         return descripcionExp;
     }
 
-    public void setDescripExp(String descripExp) {
+    public void setDescripcionExp(String descripExp) {
         this.descripcionExp = descripExp;
     }
     
