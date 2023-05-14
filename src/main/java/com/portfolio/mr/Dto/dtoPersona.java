@@ -1,49 +1,28 @@
+package com.portfolio.mr.Dto;
 
-package com.portfolio.mr.Entity;
+import jakarta.validation.constraints.NotBlank;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
-//import lombok.Getter;
-//import lombok.Setter; 
+public class dtoPersona {
 
-//@Getter @Setter // Es lo mismo que insertar los getters y setters
-@Entity
-public class Persona {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    
-    @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
+    @NotBlank
     private String nombre;
-    
-    @NotNull
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
+    @NotBlank
     private String apellido;
-    
-    @NotNull
+    @NotBlank
     private String img;
-    
-    @Size(min = 1, max = 50, message = "No cumple con la longitud")
-    private String profesion;
-    
-    @Size(min = 1, max = 100, message = "No cumple con la longitud")
-    private String edad;
-    
-    @NotNull
-    private String descripcion;
-   
-    //Constructores
 
-    public Persona() {
+    private String profesion;
+
+    private String edad;
+    @NotBlank
+    private String descripcion;
+    
+    //Constructor
+
+    public dtoPersona() {
     }
 
-    public Persona(String nombre, String apellido, String img, String profesion, String edad, String descripcion) {
+    public dtoPersona(String nombre, String apellido, String img, String profesion, String edad, String descripcion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
@@ -53,14 +32,6 @@ public class Persona {
     }
     
     //GyS
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;
